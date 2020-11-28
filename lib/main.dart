@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'navigation/navigation.dart';
+import 'theme.dart';
 void main() {
   runApp(MyApp());
 }
@@ -10,24 +11,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Shop',
-      theme: ThemeData(
-        primaryColor: Colors.white,
-      ),
-      home: MainContent()
-    );
-  }
-}
-
-class MainContent extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-            title: Text('Shop')
-        ),
-        body: Center(
-          child: Text("Hello"),
-        )
+      theme: appTheme,
+      home: Navigation()
     );
   }
 }

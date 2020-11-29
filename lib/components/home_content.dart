@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'custom_slide_img.dart';
 import 'package:flutter_shop_app/components/game_list.dart';
 import 'categories.dart';
 import '../utils/constants.dart' as theme;
@@ -21,6 +22,7 @@ class _SearchGamesState extends State<HomeContent> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                SlideImg(),
                 Text(
                   "All games",
                   style: TextStyle(
@@ -31,7 +33,7 @@ class _SearchGamesState extends State<HomeContent> {
                 SizedBox(height: 8),
                 Categories(),
                 SizedBox(height: 8),
-                GameList(height: 520)
+                GameList(height: 300)
               ],
             )
           ],

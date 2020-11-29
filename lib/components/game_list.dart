@@ -38,21 +38,18 @@ class _GameListState extends State<GameList> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: widget.height,
-        child: ListView.builder(
-          padding: EdgeInsets.all(0),
-          shrinkWrap: true,
-          itemCount: _items.length,
-          itemBuilder: (context, index) {
-            return GameListItem(
-              item: _items[index],
-              onTap: (item) => Scaffold.of(context)
-                  .showSnackBar(SnackBar(
-                  content: Text(item.name),
-                  duration: Duration(seconds: 1),
-              )),
-            );
-          },
-        ));
+        child: Column(
+          children: _items.map((item) => new GameListItem(
+      item: item,
+      onTap: (item) => Scaffold.of(context)
+          .showSnackBar(SnackBar(
+        content: Text(item.name),
+        duration: Duration(seconds: 1),
+      )
+      )
+          )
+          ).toList()
+        )
+    );
   }
 }

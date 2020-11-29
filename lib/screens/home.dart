@@ -8,24 +8,21 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Container(
-          margin: EdgeInsets.only(top: 16.0),
-          child: CustomTabBar(
-            height: 100.0,
-            labels: [
-              "Games",
-              "Hardware",
-            ],
-            widgets: [
-              HomeContent(type: "game"),
-              HomeContent(type: "hardware"),
-            ],
-            labelStyle: TextStyle(
-                fontSize: 50,
-                fontWeight: FontWeight.w600,
-                fontFamily: "Montserrat"
-            ),
-          )
+      child: CustomTabBar(
+        height: 100.0,
+        labels: [
+          "Games",
+          "Hardware",
+        ],
+        widgets: [
+          HomeContent(type: "game"),
+          HomeContent(type: "hardware"),
+        ],
+        labelStyle: TextStyle(
+            fontSize: 50,
+            fontWeight: FontWeight.w600,
+            fontFamily: "Montserrat"
+        ),
       ),
     );
   }

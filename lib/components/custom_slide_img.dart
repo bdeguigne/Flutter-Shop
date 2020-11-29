@@ -81,11 +81,7 @@ class Item1 extends StatelessWidget {
     return Container(
 
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            stops: [0.3, 1],
-        ),
+
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -109,11 +105,7 @@ class Item2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            stops: [0.3, 1],
-        ),
+
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -134,11 +126,7 @@ class Item3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            stops: [0.3, 1],
-        ),
+
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -159,11 +147,7 @@ class Item4 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            stops: [0.3, 1],
-        ),
+
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

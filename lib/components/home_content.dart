@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'custom_slide_img.dart';
 
 class HomeContent extends StatefulWidget {
   const HomeContent({this.type});
@@ -13,11 +14,16 @@ class _SearchGamesState extends State<HomeContent> {
   Widget build(BuildContext context) {
     return Container(
         padding: EdgeInsets.all(16.0),
-        child: Text(
-          "Featured",
-          style: TextStyle(
-              fontWeight: FontWeight.w600,
-              fontSize: Theme.of(context).textTheme.headline5.fontSize),
+        child: Column(
+          children: <Widget>[
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SlideImg(),
+                SizedBox(height: 16),
+              ]
+            )
+          ],
         )
     );
   }

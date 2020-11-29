@@ -27,17 +27,15 @@ class _NavigationState extends State<Navigation>
     Destination(3, 'Cart', Icons.shopping_bag_outlined, Cart()),
   ];
 
-
-
   @override
   void initState() {
     super.initState();
 
     _faders =
         _allDestinations.map<AnimationController>((Destination destination) {
-          return AnimationController(
-              vsync: this, duration: Duration(milliseconds: 200));
-        }).toList();
+      return AnimationController(
+          vsync: this, duration: Duration(milliseconds: 200));
+    }).toList();
     _faders[_currentIndex].value = 1.0;
     _destinationKeys =
         List<Key>.generate(_allDestinations.length, (int index) => GlobalKey())
@@ -53,33 +51,27 @@ class _NavigationState extends State<Navigation>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        top: false,
-        child: Stack(
-          fit: StackFit.expand,
-          children: _allDestinations.map<Widget>((Destination destination) {
-            final Widget view = FadeTransition(
-              opacity: _faders[destination.index]
-                  .drive(CurveTween(curve: Curves.fastOutSlowIn)),
-              child: KeyedSubtree(
-                key: _destinationKeys[destination.index],
-                child: DestinationView(
-                    destination: destination
-                ),
-              ),
-            );
-            if (destination.index == _currentIndex) {
-              _faders[destination.index].forward();
-              return view;
-            } else {
-              _faders[destination.index].reverse();
-              if (_faders[destination.index].isAnimating) {
-                return IgnorePointer(child: view);
-              }
-              return Offstage(child: view);
+      body: Stack(
+        children: _allDestinations.map<Widget>((Destination destination) {
+          final Widget view = FadeTransition(
+            opacity: _faders[destination.index]
+                .drive(CurveTween(curve: Curves.fastOutSlowIn)),
+            child: KeyedSubtree(
+              key: _destinationKeys[destination.index],
+              child: DestinationView(destination: destination),
+            ),
+          );
+          if (destination.index == _currentIndex) {
+            _faders[destination.index].forward();
+            return view;
+          } else {
+            _faders[destination.index].reverse();
+            if (_faders[destination.index].isAnimating) {
+              return IgnorePointer(child: view);
             }
-          }).toList(),
-        ),
+            return Offstage(child: view);
+          }
+        }).toList(),
       ),
       bottomNavigationBar: RoundedBottomNavigationBar(
         borderRadius: 15.0,

@@ -5,6 +5,10 @@ import 'package:flutter_shop_app/components/game_list_item.dart';
 import '../item.dart';
 
 class GameList extends StatefulWidget {
+  const GameList({Key key, this.height}) : super(key: key);
+
+  final double height;
+
   @override
   _GameListState createState() => _GameListState();
 }
@@ -34,17 +38,21 @@ class _GameListState extends State<GameList> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 500,
+        height: widget.height,
         child: ListView.builder(
           padding: EdgeInsets.all(0),
           shrinkWrap: true,
           itemCount: _items.length,
           itemBuilder: (context, index) {
             return GameListItem(
-              item: _items[index]
+              item: _items[index],
+              onTap: (item) => Scaffold.of(context)
+                  .showSnackBar(SnackBar(
+                  content: Text(item.name),
+                  duration: Duration(seconds: 1),
+              )),
             );
           },
-      )
-    );
+        ));
   }
 }

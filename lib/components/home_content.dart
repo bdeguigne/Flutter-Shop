@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shop_app/components/game_list.dart';
 import 'categories.dart';
+import '../utils/constants.dart' as theme;
 
 class HomeContent extends StatefulWidget {
   const HomeContent({this.type});
@@ -20,9 +21,17 @@ class _SearchGamesState extends State<HomeContent> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Text(
+                  "All games",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                      fontSize: Theme.of(context).textTheme.headline5.fontSize,
+                    ),
+                  ),
+                SizedBox(height: 8),
                 Categories(),
-                SizedBox(height: 16),
-                GameList()
+                SizedBox(height: 8),
+                GameList(height: 520)
               ],
             )
           ],

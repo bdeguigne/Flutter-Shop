@@ -34,7 +34,7 @@ class _CustomTabBarState extends State<CustomTabBar>
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(widget.height),
+          preferredSize: Size.fromHeight(widget.height + 16),
           child:  TabBar(
             controller: _tabController,
             tabs: widget.labels.map((String label) {

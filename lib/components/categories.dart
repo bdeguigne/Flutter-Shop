@@ -10,14 +10,19 @@ class Categories extends StatelessWidget {
               InputChip(
                 label: Text('Adventure'),
                 onSelected: (bool value) {},
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
               ),
+              SizedBox(width: 8),
               InputChip(
                 label: Text('Action'),
                 onSelected: (bool value) {},
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
               ),
+              SizedBox(width: 8),
               InputChip(
                 label: Text('RPG'),
                 onSelected: (bool value) {},
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
               ),
             ],
           ),

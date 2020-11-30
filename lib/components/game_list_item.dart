@@ -18,7 +18,7 @@ class GameListItem extends StatelessWidget {
           child: Expanded(
               flex: 1,
               child: Row(
-                crossAxisAlignment: CrossAxisAlignment.baseline,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),

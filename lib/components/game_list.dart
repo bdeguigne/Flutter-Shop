@@ -37,19 +37,28 @@ class _GameListState extends State<GameList> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: Column(
-          children: _items.map((item) => new GameListItem(
-      item: item,
-      onTap: (item) => Scaffold.of(context)
-          .showSnackBar(SnackBar(
-        content: Text(item.name),
-        duration: Duration(seconds: 1),
-      )
-      )
+    if (_items != null) {
+      return Container(
+          child: Column(
+              children: _items.map((item) =>
+              new GameListItem(
+                  item: item,
+                  onTap: (item) =>
+                      Scaffold.of(context)
+                          .showSnackBar(SnackBar(
+                        content: Text(item.name),
+                        duration: Duration(seconds: 1),
+                      )
+                      )
+              )
+              ).toList()
           )
-          ).toList()
-        )
-    );
+      );
+    }
+    else {
+      return Center(
+        child: CircularProgressIndicator(),
+      );
+    }
   }
 }

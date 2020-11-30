@@ -22,8 +22,8 @@ class GameListItem extends StatelessWidget {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                    child: Image(
-                      image: NetworkImage(item.thumbnail),
+                    child: Image.network(
+                      item.thumbnail,
                       height: 100,
                       width: 120,
                       fit: BoxFit.cover,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shop_app/utils/hex_color.dart';
 
 const lightBackgroundColor = Colors.white;
 const lightSecondaryBackgroundColor = Color(0xfff4f4f4);

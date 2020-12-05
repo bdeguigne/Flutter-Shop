@@ -17,8 +17,6 @@ class _DestinationViewState extends State<DestinationView> {
   @override
   void initState() {
     super.initState();
-
-    Widget Content = widget.destination.content;
   }
 
   @override

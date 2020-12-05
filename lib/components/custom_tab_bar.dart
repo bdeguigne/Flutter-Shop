@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../utils/hex_color.dart';
 import "../utils/constants.dart" as theme;
 
 class CustomTabBar extends StatefulWidget {

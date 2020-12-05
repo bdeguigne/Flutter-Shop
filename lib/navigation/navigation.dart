@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../item.dart';
 import '../utils/hex_color.dart';
 import '../components/rounded_navigation_bar.dart';
 import 'destination.dart';
@@ -10,6 +11,10 @@ import '../screens/favorites.dart';
 import '../screens/cart.dart';
 
 class Navigation extends StatefulWidget {
+  const Navigation({Key key, this.items}) : super(key: key);
+
+  final List<Item> items;
+
   @override
   _NavigationState createState() => _NavigationState();
 }
@@ -20,16 +25,18 @@ class _NavigationState extends State<Navigation>
   List<Key> _destinationKeys;
   int _currentIndex = 0;
 
-  List<Destination> _allDestinations = <Destination>[
-    Destination(0, 'Home', Icons.home, Home()),
-    Destination(1, 'Search', Icons.search, Search()),
-    Destination(2, 'Favorites test', Icons.favorite_border, Favorites()),
-    Destination(3, 'Cart', Icons.shopping_bag_outlined, Cart()),
-  ];
+  List<Destination> _allDestinations;
 
   @override
   void initState() {
     super.initState();
+
+    _allDestinations = <Destination>[
+      Destination(0, 'Home', Icons.home, Home(items: widget.items)),
+      Destination(1, 'Search', Icons.search, Search(items: widget.items)),
+      Destination(2, 'Favorites test', Icons.favorite_border, Favorites(items: widget.items)),
+      Destination(3, 'Cart', Icons.shopping_bag_outlined, Cart(items: widget.items)),
+    ];
 
     _faders =
         _allDestinations.map<AnimationController>((Destination destination) {

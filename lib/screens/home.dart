@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import '../components/custom_tab_bar.dart';
 import '../components/home_content.dart';
+import '../item.dart';
 
 class Home extends StatelessWidget {
-  const Home();
+  const Home({Key key, this.items}) : super(key: key);
+
+  final List<Item> items;
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +18,8 @@ class Home extends StatelessWidget {
           "Hardware",
         ],
         widgets: [
-          HomeContent(type: "game"),
-          HomeContent(type: "hardware"),
+          HomeContent(type: "game", items: items),
+          HomeContent(type: "hardware", items: items),
         ],
         labelStyle: TextStyle(
             fontSize: 50,

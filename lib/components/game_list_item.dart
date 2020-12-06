@@ -11,10 +11,11 @@ class GameListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        margin: EdgeInsets.only(bottom: 16.0, left: 16.0, right: 16),
-        child: InkWell(
-          onTap: () => onTap(item),
+    return InkWell(
+      splashColor: theme.LightTheme.rippleColor,
+      onTap: () => onTap(item),
+      child: Container(
+          margin: EdgeInsets.only(bottom: 8.0, top: 8.0, left: 16.0, right: 16),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -25,6 +26,16 @@ class GameListItem extends StatelessWidget {
                   height: 100,
                   width: 120,
                   fit: BoxFit.cover,
+                  loadingBuilder: (BuildContext context, Widget child,
+                      ImageChunkEvent loadingProgress) {
+                    if (loadingProgress == null) return child;
+                    return Image(
+                      height: 100,
+                      width: 120,
+                      image: AssetImage("assets/card_placeholder.png"),
+                      fit: BoxFit.cover,
+                    );
+                  },
                 ),
               ),
               Flexible(
@@ -49,14 +60,14 @@ class GameListItem extends StatelessWidget {
                                             TextDecoration.lineThrough,
                                         fontWeight: FontWeight.w500,
                                         color:
-                                            theme.lightSecondaryTextColor),
+                                            theme.LightTheme.secondaryTextColor),
                                   ),
                                   SizedBox(width: 4),
                                   Text(
                                     '\$${item.newPrice}',
                                     style: TextStyle(
                                         fontWeight: FontWeight.w600,
-                                        color: theme.lightButtonColor),
+                                        color: theme.LightTheme.buttonColor),
                                   ),
                                 ],
                               ))
@@ -67,7 +78,7 @@ class GameListItem extends StatelessWidget {
                                     '\$${item.price}',
                                     style: TextStyle(
                                         fontWeight: FontWeight.w600,
-                                        color: theme.lightButtonColor),
+                                        color: theme.LightTheme.buttonColor),
                                   ),
                                 ],
                               )),
@@ -84,14 +95,14 @@ class GameListItem extends StatelessWidget {
                                                 Radius.circular(4)),
                                             border: Border.all(
                                                 color: theme
-                                                    .lightSecondaryTextColor)),
+                                                    .LightTheme.secondaryTextColor)),
                                         child: Text(
                                           item.category[0].toUpperCase(),
                                           style: TextStyle(
                                               fontSize: 12,
                                               fontWeight: FontWeight.w500,
                                               color: theme
-                                                  .lightSecondaryTextColor),
+                                                  .LightTheme.secondaryTextColor),
                                         ),
                                       ),
                                     SizedBox(
@@ -105,14 +116,14 @@ class GameListItem extends StatelessWidget {
                                                 Radius.circular(4)),
                                             border: Border.all(
                                                 color: theme
-                                                    .lightSecondaryTextColor)),
+                                                    .LightTheme.secondaryTextColor)),
                                         child: Text(
                                           item.category[1].toUpperCase(),
                                           style: TextStyle(
                                               fontSize: 12,
                                               fontWeight: FontWeight.w500,
                                               color: theme
-                                                  .lightSecondaryTextColor),
+                                                  .LightTheme.secondaryTextColor),
                                         ),
                                       ),
                                   ],
@@ -121,7 +132,7 @@ class GameListItem extends StatelessWidget {
                             )
                           ])))
             ],
-          ),
-        ));
+          )),
+    );
   }
 }

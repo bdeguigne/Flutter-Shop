@@ -47,7 +47,7 @@ class _CustomTabBarState extends State<CustomTabBar>
             indicatorColor: Colors.transparent,
             indicatorWeight: 1,
             labelStyle: widget.labelStyle,
-            unselectedLabelColor: theme.lightUnselectedLabelColor,
+            unselectedLabelColor: theme.LightTheme.unselectedLabelColor,
         ),
       ),
       body: TabBarView(

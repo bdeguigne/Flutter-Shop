@@ -38,7 +38,7 @@ class HomeContent extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 8),
-                  SlideImg(), // Slider
+                  SlideImg(items: items), // Slider
                   Container(
                     margin: EdgeInsets.only(left: 16),
                     child: Text(
@@ -54,7 +54,7 @@ class HomeContent extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 8),
-                  Container(margin: EdgeInsets.only(left: 16), child: Categories()),  // Categories (Chips)
+                  Categories(items: items),  // Categories (Chips)
                   SizedBox(height: 8),
                 ],
               );
@@ -62,6 +62,7 @@ class HomeContent extends StatelessWidget {
             index = index - numberOfExtraWidget;
             return GameListItem(
                 item: items[index],
+                // TODO Remplacer le snackBar par une vue qui affiche le détail de l'item choisi
                 onTap: (item) => Scaffold.of(context).showSnackBar(SnackBar(
                   content: Text(item.name),
                   duration: Duration(seconds: 1),

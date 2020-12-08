@@ -22,19 +22,12 @@ class SliderItem extends StatelessWidget {
               child: Container(
                   child: ClipRRect(
                       borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                      child: Image.network(
-                        item.thumbnail,
+                      child: FadeInImage.assetNetwork(
+                        placeholder: 'assets/banner_placeholder.png',
+                        image: item.thumbnail,
                         height: 190.0,
                         fit: BoxFit.cover,
-                        loadingBuilder: (BuildContext context, Widget child,
-                            ImageChunkEvent loadingProgress) {
-                          if (loadingProgress == null) return child;
-                          return Image(
-                            height: 190.0,
-                            image: AssetImage("assets/banner_placeholder.png"),
-                            fit: BoxFit.cover,
-                          );
-                        },
+                        fadeInDuration: Duration(milliseconds: 500),
                       )
                       )),
             ),

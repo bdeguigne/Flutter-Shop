@@ -56,10 +56,8 @@ class _SlideImgState extends State<SlideImg> {
             return Builder(builder: (BuildContext context) {
               return SliderItem(
                   item: item,
-                  onTap: (item) => Scaffold.of(context).showSnackBar(SnackBar(
-                        content: Text('Featured Item = ${item.name}'),
-                        duration: Duration(seconds: 1),
-                      )));
+                  onTap: (item) =>
+                      Navigator.pushNamed(context, '/detail', arguments: item));
             });
           }).toList(),
         ),

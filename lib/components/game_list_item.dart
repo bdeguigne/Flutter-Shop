@@ -21,22 +21,14 @@ class GameListItem extends StatelessWidget {
             children: [
               ClipRRect(
                 borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                child: Image.network(
-                  item.thumbnail,
+                child: FadeInImage.assetNetwork(
+                  placeholder: 'assets/card_placeholder.png',
+                  image: item.thumbnail,
                   height: 100,
                   width: 120,
                   fit: BoxFit.cover,
-                  loadingBuilder: (BuildContext context, Widget child,
-                      ImageChunkEvent loadingProgress) {
-                    if (loadingProgress == null) return child;
-                    return Image(
-                      height: 100,
-                      width: 120,
-                      image: AssetImage("assets/card_placeholder.png"),
-                      fit: BoxFit.cover,
-                    );
-                  },
-                ),
+                  fadeInDuration: Duration(milliseconds: 500),
+                )
               ),
               Flexible(
                   child: Container(

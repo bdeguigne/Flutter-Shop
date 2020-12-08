@@ -45,7 +45,7 @@
     "screenshots": [],
     "type": "Game",
     "Category": ["RPG", "FPS"],
-    "isFeatured": true
+    "isFeatured": false
   },
   {
     "name": "BioShock Infinite: The Complete Edition",
@@ -57,7 +57,7 @@
     "screenshots": [],
     "type": "Game",
     "Category": ["Action", "FPS"],
-    "isFeatured": true
+    "isFeatured": false
   },
   {
     "name": "Silence",
@@ -81,7 +81,7 @@
     "screenshots": [],
     "type": "Game",
     "Category": ["Action"],
-    "isFeatured": false
+    "isFeatured": true
   },
   {
     "name": "The Outer Worlds",
@@ -129,6 +129,6 @@
     "screenshots": [],
     "type": "Game",
     "Category": ["Animals", "Simulation"],
-    "isFeatured": false
+    "isFeatured": true
   }
 ]

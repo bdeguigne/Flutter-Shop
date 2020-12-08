@@ -29,11 +29,8 @@ class HomeContent extends StatelessWidget {
                       "Featured",
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
-                        fontSize: Theme
-                            .of(context)
-                            .textTheme
-                            .headline5
-                            .fontSize,
+                        fontSize:
+                            Theme.of(context).textTheme.headline5.fontSize,
                       ),
                     ),
                   ),
@@ -45,16 +42,13 @@ class HomeContent extends StatelessWidget {
                       "All games",
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
-                        fontSize: Theme
-                            .of(context)
-                            .textTheme
-                            .headline5
-                            .fontSize,
+                        fontSize:
+                            Theme.of(context).textTheme.headline5.fontSize,
                       ),
                     ),
                   ),
                   SizedBox(height: 8),
-                  Categories(items: items),  // Categories (Chips)
+                  Categories(items: items), // Categories (Chips)
                   SizedBox(height: 8),
                 ],
               );
@@ -62,17 +56,10 @@ class HomeContent extends StatelessWidget {
             index = index - numberOfExtraWidget;
             return GameListItem(
                 item: items[index],
-                // TODO Remplacer le snackBar par une vue qui affiche le détail de l'item choisi
-                onTap: (item) => Scaffold.of(context).showSnackBar(SnackBar(
-                  content: Text(item.name),
-                  duration: Duration(seconds: 1),
-                )
-                )
-            );
-          }
-      );
-    }
-    else {
+                onTap: (item) =>
+                    Navigator.pushNamed(context, '/detail', arguments: item));
+          });
+    } else {
       return Center(
         child: CircularProgressIndicator(),
       );

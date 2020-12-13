@@ -19,6 +19,6 @@ class Item {
 
   @override
   String toString() {
-    return 'ITEM = ${this.name}';
+    return 'ITEM = ${this.name}\n';
   }
 }

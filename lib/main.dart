@@ -2,6 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_shop_app/components/product_details.dart';
+import 'package:flutter_shop_app/screens/cart.dart';
+import 'package:flutter_shop_app/screens/favorites.dart';
 import 'item.dart';
 import 'navigation/navigation.dart';
 import 'package:flutter/services.dart' show rootBundle;
@@ -33,7 +35,9 @@ class InitRoute extends StatelessWidget {
         theme: appTheme,
       routes: {
           '/': (context) => Navigation(items: items),
-          '/detail': (context) => ProductDetail()
+          '/detail': (context) => ProductDetail(),
+          '/cart': (context) => Cart(items: items),
+          '/favorites': (context) => Favorites(items:items),
       },
     );
   }

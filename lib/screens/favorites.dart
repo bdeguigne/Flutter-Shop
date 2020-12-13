@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../item.dart';
+
 class Favorites extends StatelessWidget {
   const Favorites({Key key, this.items}) : super(key: key);
 
@@ -7,6 +8,11 @@ class Favorites extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text("Favorites");
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Favorites")
+      ),
+      body: Text("Favorites"),
+    );
   }
 }

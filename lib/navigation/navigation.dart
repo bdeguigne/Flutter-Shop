@@ -7,7 +7,7 @@ import 'destination_view.dart';
 
 import '../screens/home.dart';
 import '../screens/search.dart';
-import '../screens/favorites.dart';
+import '../screens/profile.dart';
 import '../screens/cart.dart';
 
 class Navigation extends StatefulWidget {
@@ -34,8 +34,8 @@ class _NavigationState extends State<Navigation>
     _allDestinations = <Destination>[
       Destination(0, 'Home', Icons.home, Home(items: widget.items)),
       Destination(1, 'Search', Icons.search, Search(items: widget.items)),
-      Destination(2, 'Favorites test', Icons.favorite_border, Favorites(items: widget.items)),
-      Destination(3, 'Cart', Icons.shopping_bag_outlined, Cart(items: widget.items)),
+      Destination(2, 'Cart', Icons.shopping_bag_outlined, Cart(items: widget.items)),
+      Destination(3, 'Profile', Icons.perm_identity, Profile(items: widget.items)),
     ];
 
     _faders =

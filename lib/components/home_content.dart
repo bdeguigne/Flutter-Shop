@@ -23,6 +23,7 @@ class HomeContent extends StatelessWidget {
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  SizedBox(height: 8),
                   Container(
                     margin: EdgeInsets.only(left: 16),
                     child: Text(
@@ -55,6 +56,7 @@ class HomeContent extends StatelessWidget {
             }
             index = index - numberOfExtraWidget;
             return GameListItem(
+                padding: EdgeInsets.only(bottom: 8.0, top: 8.0, left: 16.0, right: 16),
                 item: items[index],
                 onTap: (item) =>
                     Navigator.pushNamed(context, '/detail', arguments: item));

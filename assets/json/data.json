@@ -1,7 +1,7 @@
 [
   {
     "name": "The Legend of Zelda: Breath of the Wild",
-    "description": "Some descriptions...",
+    "description": "Step into a world of discovery, exploration and adventure in The Legend of Zelda: Breath of the Wild, a boundary-breaking new game in the acclaimed series",
     "price": 59.99,
     "newPrice": null,
     "isPromo": false,
@@ -13,7 +13,7 @@
   },
   {
     "name": "The Legend of Zelda: Link's Awakening",
-    "description": "Some descriptions...",
+    "description": "Help Link escape a strange land in The Legend of Zelda: Link’s Awakening for Nintendo Switch.",
     "price": 59.99,
     "newPrice": 39.99,
     "isPromo": true,
@@ -25,7 +25,7 @@
   },
   {
     "name": "Xenoblade Chronicles: Definitive Edition",
-    "description": "Some descriptions...",
+    "description": "Uncover the secrets of the Monado and save the world in Xenoblade Chronicles: Definitive Edition on Nintendo Switch.",
     "price": 59.99,
     "newPrice": 39.99,
     "isPromo": true,
@@ -37,7 +37,7 @@
   },
   {
     "name": "Borderlands: Game of the Year Edition",
-    "description": "Some descriptions...",
+    "description": "Discover the co-op shooter-looter that started it all, crammed with content and enhancements!",
     "price": 29.99,
     "newPrice": 17.99,
     "isPromo": true,
@@ -49,7 +49,7 @@
   },
   {
     "name": "BioShock Infinite: The Complete Edition",
-    "description": "Some descriptions...",
+    "description": "Travel to Columbia, a flying city above the clouds, and rescue a mysterious woman named Elizabeth.",
     "price": 19.99,
     "newPrice": 11.99,
     "isPromo": true,
@@ -61,7 +61,7 @@
   },
   {
     "name": "Silence",
-    "description": "Some descriptions...",
+    "description": "Can you save Silence, the grim, but also serene world between life and death?",
     "price": 39.99,
     "newPrice": 3.99,
     "isPromo": true,
@@ -73,7 +73,7 @@
   },
   {
     "name": "Monster Hunter Generations Ultimate™",
-    "description": "Some descriptions...",
+    "description": "Hunting season is OPEN! This critically acclaimed action RPG series makes its debut on Nintendo Switch.",
     "price": 49.99,
     "newPrice": 15.99,
     "isPromo": true,
@@ -85,7 +85,7 @@
   },
   {
     "name": "The Outer Worlds",
-    "description": "Some descriptions...",
+    "description": "The Outer Worlds is a new single-player sci-fi RPG from Obsidian Entertainment and Private Division.",
     "price": 59.99,
     "newPrice": 29.99,
     "isPromo": true,
@@ -97,7 +97,7 @@
   },
   {
     "name": "Super Mario Party",
-    "description": "Some descriptions...",
+    "description": "Throw a party anytime, anywhere, with anyone in Super Mario Party for Nintendo Switch!",
     "price": 59.99,
     "newPrice": null,
     "isPromo": false,
@@ -109,7 +109,7 @@
   },
   {
     "name": "New Super Mario Bros. U Deluxe",
-    "description": "Some descriptions...",
+    "description": "Enjoy 164 courses for up to four players anytime, anywhere in New Super Mario Bros. U Deluxe on Nintendo Switch!",
     "price": 59.99,
     "newPrice": null,
     "isPromo": false,
@@ -121,7 +121,7 @@
   },
   {
     "name": "Animal Crossing: New Horizons",
-    "description": "Some descriptions...",
+    "description": "Start your new life with Nook Inc.'s Deserted Island Getaway Package!",
     "price": 59.99,
     "newPrice": null,
     "isPromo": false,

@@ -6,22 +6,14 @@ class UserLayout extends StatelessWidget {
   const UserLayout({Key key, this.onTapAvatar, this.avatar}) : super(key: key);
 
   final void Function() onTapAvatar;
-  final File avatar;
+  final Image avatar;
 
   @override
   Widget build(BuildContext context) {
     return Row(children: [
       Stack(children: [
         ClipOval(
-          child: Image(
-            fit: BoxFit.cover,
-              width: 80,
-              height: 80,
-              image: avatar == null ?
-              NetworkImage(
-                  "https://medgoldresources.com/wp-content/uploads/2018/02/avatar-placeholder.gif")
-              : FileImage(avatar)
-          ),
+          child: avatar,
         ),
         Positioned.fill(
           child: Align(

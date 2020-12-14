@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_shop_app/utils/constants.dart';
 import '../components/custom_tab_bar.dart';
 import '../components/home_content.dart';
 import '../item.dart';
@@ -21,11 +22,7 @@ class Home extends StatelessWidget {
           HomeContent(type: "game", items: items),
           HomeContent(type: "hardware", items: items),
         ],
-        labelStyle: TextStyle(
-            fontSize: 50,
-            fontWeight: FontWeight.w600,
-            fontFamily: "Montserrat"
-        ),
+        labelStyle: AppText.h1
       ),
     );
   }

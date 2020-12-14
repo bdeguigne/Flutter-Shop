@@ -11,6 +11,7 @@ class LightTheme {
   static const textColor = Colors.black;
   static const secondaryTextColor = Color(0xffa5a5a5);
   static const unselectedLabelColor = Color(0xFFe5e5e5);
+  static const placeholderColor = Color(0xFFCACACA);
 
   /* Cards */
   static const cardColor = Colors.white;
@@ -26,6 +27,16 @@ class LightTheme {
 
   /* Others */
   static const rippleColor = Color(0x80ff5248);
+  static const searchBarColor = Colors.white;
+  static const dividerColor = Color(0xFFD8D8D8);
+}
+
+class AppText {
+  static const h1 = TextStyle(
+      fontWeight: FontWeight.w600,
+      fontFamily: "Montserrat",
+      fontSize: 50
+  );
 }
 
 

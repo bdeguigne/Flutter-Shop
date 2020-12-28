@@ -25,7 +25,9 @@ Future<List<Item>> getItems() async {
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
+  Hive.registerAdapter(ItemAdapter());
   await Hive.openBox<String>("user_avatar");
+  await Hive.openBox<Item>("cart_data");
   List<Item> items = await getItems();
   runApp(InitRoute(items: items));
 }

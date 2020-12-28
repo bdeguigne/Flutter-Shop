@@ -1,10 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_shop_app/components/genre_layout.dart';
 import 'package:flutter_shop_app/item.dart';
 import '../utils/constants.dart' as theme;
 
 class GameListItem extends StatelessWidget {
-  const GameListItem({Key key, @required this.item, this.onTap, this.padding, this.showCategories = true, this.height = 100.0, this.style = "list"}) : super(key: key);
+  const GameListItem(
+      {Key key,
+      @required this.item,
+      this.onTap,
+      this.padding,
+      this.showCategories = true,
+      this.height = 100.0,
+      this.style = "list"})
+      : super(key: key);
 
   final Item item;
   final EdgeInsetsGeometry padding;
@@ -52,8 +61,8 @@ class GameListItem extends StatelessWidget {
                                     style: TextStyle(
                                         decoration: TextDecoration.lineThrough,
                                         fontWeight: FontWeight.w500,
-                                        color:
-                                            theme.LightTheme.secondaryTextColor),
+                                        color: theme
+                                            .LightTheme.secondaryTextColor),
                                   ),
                                   SizedBox(width: 4),
                                   Text(
@@ -76,54 +85,14 @@ class GameListItem extends StatelessWidget {
                                 ],
                               )),
                             if (showCategories == true)
-                            Expanded(
-                              child: Align(
-                                alignment: Alignment.bottomLeft,
-                                child: Row(
-                                  children: [
-                                    if (item.category.isNotEmpty)
-                                      Container(
-                                        padding: EdgeInsets.all(4),
-                                        decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(4)),
-                                            border: Border.all(
-                                                color: theme.LightTheme
-                                                    .secondaryTextColor)),
-                                        child: Text(
-                                          item.category[0].toUpperCase(),
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w500,
-                                              color: theme
-                                                  .LightTheme.secondaryTextColor),
-                                        ),
-                                      ),
-                                    SizedBox(
-                                      width: 4,
-                                    ),
-                                    if (item.category.length > 1)
-                                      Container(
-                                        padding: EdgeInsets.all(4),
-                                        decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(4)),
-                                            border: Border.all(
-                                                color: theme.LightTheme
-                                                    .secondaryTextColor)),
-                                        child: Text(
-                                          item.category[1].toUpperCase(),
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w500,
-                                              color: theme
-                                                  .LightTheme.secondaryTextColor),
-                                        ),
-                                      ),
-                                  ],
-                                ),
-                              ),
-                            )
+                              Expanded(
+                                child: Align(
+                                    alignment: Alignment.bottomLeft,
+                                    child: GenreLayout(
+                                      genres: item.category,
+                                      maxItems: 2,
+                                    )),
+                              )
                           ]),
                     )))
           ],
@@ -135,16 +104,14 @@ class GameListItem extends StatelessWidget {
     if (onTap != null && style == "card") {
       return Container(
         margin: padding,
-        decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.25),
-              spreadRadius: 0,
-              blurRadius: 4,
-              offset: Offset(0, 2),
-            )
-          ]
-        ),
+        decoration: BoxDecoration(boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.25),
+            spreadRadius: 0,
+            blurRadius: 4,
+            offset: Offset(0, 2),
+          )
+        ]),
         child: Material(
           color: Colors.white,
           borderRadius: BorderRadius.circular(5.0),
@@ -155,34 +122,28 @@ class GameListItem extends StatelessWidget {
               child: content()),
         ),
       );
-    }
-    else if (onTap != null && style == "list") {
+    } else if (onTap != null && style == "list") {
       return InkWell(
           splashColor: theme.LightTheme.rippleColor,
           onTap: () => onTap(item),
           child: content());
-    }
-    else if (style == "card") {
+    } else if (style == "card") {
       return Container(
         margin: padding,
-        decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.withOpacity(0.25),
-                spreadRadius: 0,
-                blurRadius: 4,
-                offset: Offset(0, 2),
-              )
-            ]
-        ),
+        decoration: BoxDecoration(boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.25),
+            spreadRadius: 0,
+            blurRadius: 4,
+            offset: Offset(0, 2),
+          )
+        ]),
         child: Material(
             color: Colors.white,
             borderRadius: BorderRadius.circular(5.0),
-            child: content()
-        ),
+            child: content()),
       );
-    }
-    else {
+    } else {
       return content();
     }
   }

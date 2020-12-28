@@ -1,13 +1,38 @@
-class Item {
+import 'package:hive/hive.dart';
+
+part 'item.g.dart';
+
+@HiveType(typeId: 0)
+class Item extends HiveObject{
+
+  @HiveField(0)
   String name;
+
+  @HiveField(1)
   String description;
+
+  @HiveField(2)
   double price;
+
+  @HiveField(3)
   double newPrice;
+
+  @HiveField(4)
   bool isPromo;
+
+  @HiveField(5)
   String thumbnail;
+
+  @HiveField(6)
   List<String> screenshots;
+
+  @HiveField(7)
   String type;
+
+  @HiveField(8)
   List<String> category;
+
+  @HiveField(9)
   bool isFeatured;
 
   Item(this.name, this.description, this.price, this.newPrice, this.isPromo,

@@ -1,17 +1,18 @@
-# flutter_shop_app
+# Flutter Nintendo eShop
 
-Shop App with Flutter
+Nintendo eShop App with Flutter
 
-## Getting Started
+## Screenshots
+Homepage
+![homepage](https://github.com/bdeguigne/Flutter-Shop/blob/main/screenshots/homepage.jpg)
 
-This project is a starting point for a Flutter application.
+Search with suggestions
+![Search](https://github.com/bdeguigne/Flutter-Shop/blob/main/screenshots/search.jpg)
 
-A few resources to get you started if this is your first Flutter project:
-test
+Product screen
+![product](https://github.com/bdeguigne/Flutter-Shop/blob/main/screenshots/product.jpg)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+![dialog](https://github.com/bdeguigne/Flutter-Shop/blob/main/screenshots/dialog.jpg)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Cart screen
+![cart](https://github.com/bdeguigne/Flutter-Shop/blob/main/screenshots/cart.jpg)
